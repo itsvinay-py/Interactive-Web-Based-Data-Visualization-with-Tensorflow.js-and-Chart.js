@@ -1,0 +1,80 @@
+body {
+    background: linear-gradient(135deg, #dde1f8 0%, #f7f5fa 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #ffffffdd;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(60, 78, 138, 0.13);
+    padding: 36px 42px 42px 42px;
+}
+
+h1 {
+    color: #233178;
+    font-size: 2.2rem;
+    margin-bottom: 22px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    color: #34429c;
+    flex: 1 1 45%;
+}
+
+label span {
+    min-width: 140px;
+    padding-right: 8px;
+}
+
+input[type="file"], select {
+    flex: 1 1 55%;
+    font-size: 1rem;
+    padding: 7px;
+    border-radius: 6px;
+    border: 1px solid #c2c6ee;
+    margin-left: 5px;
+}
+
+button {
+    background: #3855d6;
+    color: #fff;
+    font-weight: 600;
+    padding: 11px 28px;
+    border: none;
+    border-radius: 7px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+    flex: 1 1 100%;
+}
+button:hover {
+    background: #1b336b;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+    justify-content: space-between;
+}
+
+#demo {
+    background: #f3f6fd;
+    min-height: 340px;
+    border-radius: 9px;
+    padding: 27px;
+    box-shadow: 0 4px 14px rgba(79, 118, 225, 0.09);
+    margin-top: 20px;
+    width: 100%;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TFJS Multi-Chart Data Visualizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="vis.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Visualization Generator</h1>
+        <div class="controls">
+            <label for="fileInput"><span>Upload CSV file:</span>
+                <input type="file" id="fileInput" accept=".csv" />
+            </label>
+            <label for="chartType"><span>Visualization Type:</span>
+                <select id="chartType">
+                    <option value="scatter">Scatter Plot</option>
+                    <option value="barchart">Bar Chart</option>
+                    <option value="linechart">Line Chart</option>
+                    <option value="histogram">Histogram</option>
+                    <option value="heatmap">Heatmap</option>
+                    <option value="bubble">Bubble Chart</option>
+                    <option value="pie">Pie Chart</option>
+                    <option value="radar">Radar Chart</option>
+                    <option value="area">Area Chart</option>
+                    <option value="treemap">Tree Map</option>
+                    <option value="waterfall">Waterfall Chart</option>
+                </select>
+            </label>
+            <label for="xCol"><span>X-Axis Column:</span>
+                <select id="xCol"></select>
+            </label>
+            <label for="yCol"><span>Y-Axis Column:</span>
+                <select id="yCol"></select>
+            </label>
+            <label for="rCol" id="radiusLabel" style="display:none"><span>Bubble Size/Value:</span>
+                <select id="rCol"></select>
+            </label>
+            <button type="button" onclick="drawVisualization()">Visualize</button>
+        </div>
+        <div id="demo"></div>
+        <canvas id="chartjs-canvas" style="display:none; width:100%!important; max-width:700px; min-height:320px;"></canvas>
+    </div>
+    <script src="vis.js"></script>
+</body>
+</html>
